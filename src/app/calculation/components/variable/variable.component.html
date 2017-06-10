@@ -1,0 +1,9 @@
+<div class="variables-item-cont">
+  <div class="form-group">
+    <h4>{{variable.name}}</h4>
+  </div>
+  <div class="form-group">
+    <input type="number" class="form-control" [(ngModel)]="variable.value"/>
+  </div>
+  <a class="red-link" (click)="onRemoveEvent()">remove</a>
+</div>

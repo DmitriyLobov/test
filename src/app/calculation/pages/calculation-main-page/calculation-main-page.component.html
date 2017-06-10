@@ -1,0 +1,29 @@
+<div class="main-wrapper">
+  <div class="page-wrapper">
+    <div class="form-wrapper">
+      <div class="form-cont">
+        <h2>Calculation</h2>
+        <div class="form-group-cont">
+          <div class="form-group">
+            <textarea class="form-control" (submit)="calculateFormule()" [(ngModel)]="formule"></textarea>
+          </div>
+        </div>
+        <div class="form-btn-cont">
+          <button class="btn-white" (click)="calculateFormule()">Calc</button>
+        </div>
+        <div class="form-btn-cont">
+          <button class="btn-white" (click)="addControl()">Add control</button>
+        </div>
+      </div>
+      <div class="form-cont">
+        <app-variable *ngFor="let variable of list" [variable]="variable"
+                      (removeControl)="removeControl($event)"></app-variable>
+      </div>
+    </div>
+    <div class="form-wrapper">
+      <div class="form-cont">
+        <app-result></app-result>
+      </div>
+    </div>
+  </div>
+</div>
